@@ -1,78 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD Profile</title>
+    <title>Dynamic Content Navigation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        .navbar {
-            display: flex;
-            background-color: #333;
-            padding: 0.5em;
-            justify-content: space-around;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            transition: background-color 0.3s;
-        }
-
-        .navbar a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-
+        /* Quick styling for visibility */
         .content {
-            padding: 2em;
-        }
-
-        .section {
-            margin: 2em 0;
-        }
-
-        .section h2 {
-            color: #333;
+            display: none; /* Hide all content by default */
+            padding: 20px;
+            border: 1px solid #000;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
-        <a href="#grants">Grants</a>
+    <div>
+        <button onclick="showContent('home')">Home</button>
+        <button onclick="showContent('Publication')">publication</button>
+        <button onclick="showContent('Award&Grant')">Award & Grant</button>
     </div>
 
-    <div class="content">
-        <section id="home" class="section">
-            <h2>Home</h2>
-            <p>Welcome to my PhD profile website. Here you will find information about my research, publications, awards, and grants.</p>
-        </section>
-
-        <section id="publications" class="section">
-            <h2>Publications</h2>
-            <p>Details about my research papers and articles will go here.</p>
-        </section>
-
-        <section id="awards" class="section">
-            <h2>Awards</h2>
-            <p>Information about the awards I have received will be listed here.</p>
-        </section>
-
-        <section id="grants" class="section">
-            <h2>Grants</h2>
-            <p>Details about the grants I have been awarded will be shared here.</p>
-        </section>
+    <div id="home" class="content">
+        <h1>Welcome to the Home Page</h1>
+        <p>This is the home section.</p>
     </div>
+
+    <div id="Publication" class="content">
+        <h1>Publication</h1>
+        <p>Learn more about us in this section.</p>
+    </div>
+
+    <div id="Award&Grant" class="content">
+        <h1>Award&Grant</h1>
+        <p>Get in touch via this section.</p>
+    </div>
+
+    <script>
+        function showContent(section) {
+            // Hide all elements with class 'content'
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+
+            // Show the selected section
+            var show = document.getElementById(section);
+            if (show) {
+                show.style.display = 'block';
+            }
+        }
+
+        // Optionally show default section on page load
+        window.onload = function() {
+            showContent('home'); // Change 'home' to whichever section you want as default
+        };
+    </script>
 </body>
 </html>
+
 
