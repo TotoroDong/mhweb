@@ -3,20 +3,50 @@
 <head>
     <title>Dynamic Content Navigation</title>
     <style>
-        /* Quick styling for visibility */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #navbar button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #navbar button:hover {
+            background-color: #3e8e41;
+            transform: translateY(-2px);
+        }
+
         .content {
             display: none; /* Hide all content by default */
             padding: 20px;
-            border: 1px solid #000;
-            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .active {
+            display: block; /* Show the active section */
         }
     </style>
 </head>
 <body>
-    <div>
+    <div id="navbar">
         <button onclick="showContent('home')">Home</button>
-        <button onclick="showContent('Publication')">publication</button>
-        <button onclick="showContent('Award&Grant')">Award & Grant</button>
+        <button onclick="showContent('about')">About</button>
+        <button onclick="showContent('contact')">Contact</button>
     </div>
 
     <div id="home" class="content">
@@ -24,13 +54,13 @@
         <p>This is the home section.</p>
     </div>
 
-    <div id="Publication" class="content">
-        <h1>Publication</h1>
+    <div id="about" class="content">
+        <h1>About Us</h1>
         <p>Learn more about us in this section.</p>
     </div>
 
-    <div id="Award&Grant" class="content">
-        <h1>Award&Grant</h1>
+    <div id="contact" class="content">
+        <h1>Contact Us</h1>
         <p>Get in touch via this section.</p>
     </div>
 
@@ -56,5 +86,6 @@
     </script>
 </body>
 </html>
+
 
 
