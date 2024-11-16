@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dynamic Content Navigation</title>
+    <title>Miaohong Huang</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,33 +65,63 @@
         }
 
         .publications-container {
-            display: flex;
-            justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #f9f9f9; /* Light background for better readability */
+}
 
-        }
+.publications {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px; /* Limit width for better readability */
+    width: 100%;
+}
 
-        .publications {
-            text-align: left; /* Align text to the left within the list */
-            list-style: none; /* Remove default list styling */
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Ensures all items align at their start */
-            margin: 0;
-        }
+.publications li {
+    margin-bottom: 20px; /* Adds more spacing between items */
+    display: flex;
+    align-items: flex-start; /* Aligns icon and text */
+    gap: 15px; /* Adds spacing between icon and content */
+    border-bottom: 1px solid #ddd; /* Adds a subtle divider between items */
+    padding-bottom: 15px; /* Space below the content */
+}
 
-        .publications li {
-            margin-bottom: 10px; /* Adds spacing between items */
-            display: flex;
-            align-items: center; /* Aligns the icon and text vertically */
-            text-align: left;
-            width: 1000px;
-        }
+.publications img {
+    width: 40px; /* Set a consistent icon size */
+    height: 40px; /* Ensure the icon has equal width and height */
+    object-fit: contain; /* Maintain aspect ratio of the image */
+}
 
-        .publications img {
-            width: 50px; /* Set the icon size */
-            margin-right: 10px; /* Space between the icon and the text */
-        }
+.publications a {
+    color: #007BFF; /* Use a standard link color */
+    text-decoration: none; /* Remove underlines */
+    word-break: break-word; /* Break long URLs if needed */
+}
+
+.publications a:hover {
+    text-decoration: underline; /* Add underline on hover for accessibility */
+}
+
+.publications h1 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.publications p {
+    margin: 0;
+    line-height: 1.6; /* Improve text readability */
+}
+
+.publications span {
+    font-size: 0.9em; /* Slightly smaller text for metadata */
+    color: #666; /* Subtle color for additional details */
+}
+
 
         .active {
             display: block; /* Show the active section */
@@ -102,12 +132,12 @@
     <div id="navbar">
         <button onclick="showContent('Home')">Home</button>
         <button onclick="showContent('Publication')">Publication</button>
-        <button onclick="showContent('Awards & Grant')">Awards & Grant</button>
+        <button onclick="showContent('Teaching')">Teaching</button>
     </div>
 
     <div id="Home" class="content" style="padding: 20px;">
         <div class="profile" style="max-width: 1000px; margin: auto; text-align: left;">
-            <img src="asset/icon.jpg" alt="My Picture" style="display: block; margin: auto; margin-bottom: 580px; width: 300px; height: auto;">
+            <img src="asset/icon.jpg" alt="My Picture" style="display: block; margin: auto; margin-bottom: 680px; width: 300px; height: auto;">
             <div>
                 <h1 style="text-align: center;">Welcome to My Page!</h1>
                 <p>
@@ -151,17 +181,18 @@
                     to communicate effectively and achieve meaningful outcomes for the social good, particularly in health promotion and crisis management? 
                 </p>
                 <p>
-                    My primary research methodologies consist of quantitative approaches, including online and offline experiments, surveys, content analysis, and computational analysis.<br><br>
-                    Research Interest:
-                    Strategic Communication 
-                    Public Relations
-                    Emerging Media Effects
-                    Health Communication
-                    Crisis Management
-                    Persuasive Communication 
-                    <br><br>
-                    My current research projects can be classified as:
+                    My primary research methodologies consist of quantitative approaches, including online and offline experiments, surveys, content analysis, and computational analysis.
                 </p>
+                <br>
+                <p><strong>Research Interests:</strong></p>
+                <ul>
+                    <li>Strategic Communication</li>
+                    <li>Public Relations</li>
+                    <li>Emerging Media Effects</li>
+                    <li>Health Communication</li>
+                    <li>Crisis Management</li>
+                    <li>Persuasive Communication</li>
+                </ul>
                 <img src="asset/research.jpg" alt="Research Image" style="display: block; margin: auto; width: 600px; height: auto; margin-top: 20px;">
             </div>
         </div>
@@ -170,28 +201,289 @@
     
 
 
-    <div id="Publication" class="content">
-        <h1>Publications</h1>
-        <ul class="publications">
-            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., Mikkilineni, S. D., Lee, J., & Duboise, M. (2024). The effects of augmented 
-                reality on prosocial behavior intentions in the disaster news context: The 
-                mediating role of physical presence and empathy. New Media & Society, 
-                14614448241252594. https://doi.org/10.1177/14614448241252594 [SSCI]</li>
-            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., & Ki, E.-J. (2023). Examining the effect of anthropomorphic design cues on 
-                healthcare chatbots acceptance and organization-public relationships: Trust in a warm human vs. a competent machine. International Journal of Human-Computer 
-                Interaction. https://doi.org/10.1080/10447318.2023.2290378 [SSCI] </li>
-            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., & Ki, E.-J. (2023). Protecting organizational reputation during a para-crisis: 
-                The effectiveness of conversational human voice on social media and the roles of 
-                construal level, social presence, and organizational listening. Public Relations 
-                Review, 49(5), 102389. https://doi.org/10.1016/j.pubrev.2023.102389 [SSCI]</li>
-            <!-- Add more publications as needed -->
-        </ul>
+    <div id="Publication" class="content" style="display: none;">
+        <div class="publications-container">
+            <ul class="publications">
+                <h1>Publications</h1>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            <strong>Huang, M.</strong>, Mikkilineni, S. D., Lee, J., & Duboise, M. (2024). The effects of augmented 
+                            reality on prosocial behavior intentions in the disaster news context: The mediating role of physical presence and empathy. 
+                            <em>New Media & Society</em>, 14614448241252594. 
+                            <a href="https://doi.org/10.1177/14614448241252594" target="_blank">https://doi.org/10.1177/14614448241252594</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            <strong>Huang, M.</strong>, & Ki, E.-J. (2023). Examining the effect of anthropomorphic design cues on healthcare chatbots acceptance and organization-public relationships: Trust in a warm human vs. a competent machine. 
+                            <em>International Journal of Human-Computer Interaction</em>. 
+                            <a href="https://doi.org/10.1080/10447318.2023.2290378" target="_blank">https://doi.org/10.1080/10447318.2023.2290378</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            <strong>Huang, M.</strong>, & Ki, E.-J. (2023). Protecting organizational reputation during a para-crisis: The effectiveness of conversational human voice on social media and the roles of construal level, social presence, and organizational listening. 
+                            <em>Public Relations Review, 49</em>(5), 102389. 
+                            <a href="https://doi.org/10.1016/j.pubrev.2023.102389" target="_blank">https://doi.org/10.1016/j.pubrev.2023.102389</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            <strong>Huang, M.</strong>, Ki, E.-J., & Gong, H. (2023). Linking community OPR and communication infrastructure during a public health crisis: A study of community engagement in Shanghai, China. 
+                            <em>Health Communication</em>, 1–10. 
+                            <a href="https://doi.org/10.1080/10410236.2023.2251747" target="_blank">https://doi.org/10.1080/10410236.2023.2251747</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            Ki, E.-J., Kang, D. Y., & <strong>Huang, M.</strong> (2022). The state of health public relations: A content analysis of published articles in seven communication journals from 2001 to 2021. 
+                            <em>Public Relations Review</em>, 48(5), 102255. 
+                            <a href="https://doi.org/10.1016/j.pubrev.2022.102255" target="_blank">https://doi.org/10.1016/j.pubrev.2022.102255</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            Gong, H., <strong>Huang, M.</strong>, & Liu, X. (2022). Message persuasion in the Pandemic: U.S. and Chinese respondents’ reactions to mediating mechanisms of efficacy. 
+                            <em>International Journal of Communication</em>, 16, 840–863. 
+                            <a href="https://ijoc.org/index.php/ijoc/article/view/17839" target="_blank">https://ijoc.org/index.php/ijoc/article/view/17839</a>
+                        </p>
+                        <span>[SSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            Gong, H., Zhang, Y., & <strong>Huang, M.</strong> (forthcoming). Encountering uncertainty: The effect of social media influencers’ crisis attribution on public perception of responsibility. 
+                            <em>Journalism & Communication</em>. [In Chinese]
+                        </p>
+                        <span>[CSSCI]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            Gong, H., Xu, Y., & <strong>Huang, M.</strong> (2022). The persuasive mechanism of “science communication influencer” in the pandemic: Two experimental studies based on the elaboration likelihood model. 
+                            <em>Chinese Journal of Journalism & Communication</em>, 44(5), 110–133. 
+                            <a href="http://cjjc.ruc.edu.cn/CN/Y2022/V44/I5/110" target="_blank">http://cjjc.ruc.edu.cn/CN/Y2022/V44/I5/110</a>
+                        </p>
+                        <span>[*Corresponding Author] [In Chinese] [CSSCI] [Cite: 35]</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="asset/icon.jpg" alt="Document Icon">
+                    <div>
+                        <p>
+                            Gong, H., <strong>Huang, M.</strong>, & Ke, Y. (2020). The two sides of humor: Social network-mediated crisis response and influential factors. 
+                            <em>Journalism & Communication</em>, 27(2), 58–76. 
+                            <a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&filename=YANJ202002004" target="_blank">http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFD&filename=YANJ202002004</a>
+                        </p>
+                        <span>[In Chinese] [CSSCI] [Cite: 18]</span>
+                    </div>
+                </li>
+                <h1>Presentation</h1>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Ki, E.-J. (2024, November 21–24). Human vs. virtual influencers: Exploring emotional narratives for effective mental health communication strategies. 
+                        <em>The 110th Annual Convention of National Communication Association (NCA)</em>, New Orleans, US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Dong, X., & <strong>Huang, M.</strong> (2024, August 8–11). “I” speak out, “We” speak louder? The moderating role of self-construal in the impact of opinion congruence with SNS friends and experts on expression intentions. 
+                        <em>The 107th Annual Conference of Association for Education in Journalism and Mass Communication (AEJMC)</em>, Philadelphia, US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Ki, E.-J. (2024, June 20–24). How do social media influencers provide mental health support for college students: A content analysis of YouTube videos about mental health. 
+                        <em>The 74th Annual International Communication Association Conference (ICA)</em>, Gold Coast, Australia.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Guo Y., & <strong>Huang, M.</strong> (2024, June 20–24). Bridging mindfulness, empathy, and descriptive norms with disaster communication: The moderating power of collectivism in the “Beijing-Tianjin-Hebei” floods. 
+                        <em>The 74th Annual ICA Conference</em>, Gold Coast, Australia.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong> (2024, March 7–9). Misinformation verification and correction: Social risk perception and motivational drivers in the Fukushima wastewater release controversy. 
+                        <em>The 27th Annual International Public Relations Research Conference (IPRRC)</em>, Orlando, US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Rahman, T. (2023, November 16–19). What motivates people’s information-seeking and social support offering following celebrity depression disclosure: The role of identification and transportation. 
+                        <em>The 109th Annual Convention of NCA</em>, Washington, D.C., US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Ki, E.-J. (2023, August 7–10). Protecting organizational reputation during a para-crisis: The effectiveness of conversational human voice on social media and the roles of construal level, social presence, and organizational listening. 
+                        <em>The 106th Annual Conference of AEJMC</em>, Washington, D.C., US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Ki, E.-J. (2023, August 7–10). Examining the effect of anthropomorphic design cues on healthcare chatbots acceptance and organization-public relationships: Trust in a warm human vs. a competent machine. 
+                        <em>The 106th Annual Conference of AEJMC</em>, Washington, D.C., US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, Mikkilineni, S. D., & Lee, J. (2023, August 7–10). Exploring the impact of augmented reality in disaster journalism: An integrated research framework. 
+                        <em>The 106th Annual Conference of AEJMC</em>, Washington, D.C., US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong>, & Ki, E.-J. (2023, May 25–29). Linking community OPR and communication infrastructure during a public health crisis: A study of community engagement in Shanghai, China. 
+                        <em>The 73rd Annual ICA Conference</em>, Toronto, Canada.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Kim, J., Mikkilineni, S., & <strong>Huang, M.</strong> (2023, March 23–26). Integrating VR into tourism marketing: The effects of immersion and temporal distance on destination image. 
+                        <em>The 2023 American Academy of Advertising Annual Conference (AAA)</em>, Denver, US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>Huang, M.</strong> (2022, August 3–6). Gender, family, and health: A mixed-methods study of discussion among Chinese social media users on maternal health. 
+                        <em>The 105th Annual Conference of AEJMC</em>, Detroit, US.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Ki, E.-J., Kang, D. Y., & <strong>Huang, M.</strong> (2022, May 26–30). The status of health public relations: A content analysis of published articles in seven public relations journals from 2001 to 2021. 
+                        <em>The 72nd Annual ICA Conference</em>, Paris, France.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
     </div>
+    
+    
+    
+    
+    <div id="Teaching" class="content" style="text-align: left;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1>Teaching Experience</h1><br>
+ 
+        
+            <h3>APR 433: Public Relations Campaigns, University of Alabama (UA)</h3>
+            <p><strong>Instructor of Record</strong></p>
+            <p><strong>Semesters:</strong> Spring 2024, Fall 2023</p>
+            <ul>
+                <li>Developed the syllabus, designed class activities and assignments, and coordinated with appropriate organizations to serve as the client for the course.</li>
+                <li>Guided students through the four-step strategic public relations process (research, planning, implementation, evaluation), assisting them in writing public relations campaign proposals and implementing the events and strategies proposed.</li>
+                <li>Provided weekly feedback for each group on their campaign planning progress, covering components such as secondary and primary research, SWOT analysis, problem and objective statements, audience profiling, programming, strategy development, event implementation, and evaluation.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>APR 303: Public Relations Strategy, University of Alabama (UA)</h3>
+            <p><strong>Teaching Assistant</strong></p>
+            <p><strong>Semesters:</strong> Fall 2024, Summer 2024, Spring 2024, Fall 2023</p>
+            <ul>
+                <li>Managed online learning resources on Blackboard and responded to students' emails.</li>
+                <li>Covered key topics such as public relations writing, organizational analysis, public analysis, positioning, messaging, crisis management, objectives-strategies-tactics, paid media, owned media, earned media, website analytics, social media analytics, mobile apps & analytics, and evaluation.</li>
+                <li>Provided feedback and pre-grading for various student assignments, including 8 discussion videos on Flip, 9 written assignments, 4 homework tasks, and 3 exams.</li>
+                <li>Offered research opportunities as extra credit.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>APR 436/490/590: Viral Communication, University of Alabama (UA)</h3>
+            <p><strong>Teaching Assistant</strong></p>
+            <p><strong>Semesters:</strong> Summer 2024, Summer 2023, Fall 2022, Summer 2022</p>
+            <ul>
+                <li>Managed online learning resources on Blackboard and responded to students' emails.</li>
+                <li>Provided feedback and pre-grading for assignments, including 20 weekly reading reflections and relevant discussion board replies, persuasion and viral video reflection papers, and a viral communication campaign proposal based on the principles learned.</li>
+                <li>Assisted students in understanding the principles and factors that guide the development of persuasive, sticky, and viral messages, campaign strategies, tactics, and channel selection.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>APR 453: Investigation and Insights, University of Alabama (UA)</h3>
+            <p><strong>Teaching Assistant</strong></p>
+            <p><strong>Semesters:</strong> Fall 2024, Summer 2024, Spring 2024</p>
+            <ul>
+                <li>Managed online learning resources on Blackboard for this online course and responded to student inquiries via email.</li>
+                <li>Covered key topics in the field, including secondary research in advertising and public relations, qualitative research methods, survey research, experiments, data handling, applying research to ad and PR situations, and research ethics.</li>
+                <li>Provided feedback and pre-grading for student assignments, including 10 module discussion posts, a secondary research paper, and a primary research paper.</li>
+                <li>Guided students in evaluating research methods used by advertising and public relations professionals, helping them apply these methods to create strategic research plans, analyze data, and present findings persuasively.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>Mediated Crisis Communication, Xiamen University (XMU)</h3>
+            <p><strong>Teaching Assistant</strong></p>
+            <p><strong>Semester:</strong> Spring 2021</p>
+            <ul>
+                <li>Covered topics such as mediatized society and risk society, methods of media analysis, case studies of mediatized crises, strategic crisis communication and cyber violence, crisis management, and crisis communication theory.</li>
+                <li>Led discussions with each group to guide their research projects on mediated crisis communication.</li>
+                <li>Created grading rubrics for two major assignments: research proposals and research papers.</li>
+                <li>Provided feedback and pre-grading for 7 group research proposals, as well as the first drafts and final versions of their research papers.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>Intercultural Public Relations, Xiamen University (XMU)</h3>
+            <p><strong>Guest Lecturer & Teaching Assistant</strong></p>
+            <p><strong>Semester:</strong> Fall 2020</p>
+            <ul>
+                <li>Independently guest lectured a topic on public relations in a global health context.</li>
+                <li>Created an overview of interview protocols and guided students in designing their own protocols for research on communication between Chinese doctors and foreign patients.</li>
+                <li>Provided feedback and pre-grading for students’ in-depth interview research.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>Research Method: Content Analysis, Xiamen University (XMU)</h3>
+            <p><strong>Teaching Assistant</strong></p>
+            <p><strong>Semester:</strong> Fall 2019</p>
+            <ul>
+                <li>Guided 12 student groups on their content analysis research projects.</li>
+                <li>Provided feedback and pre-grading on 4 major assignments: research design and coding schemes, inter-coder reliability, data analysis and results reports, and final manuscript.</li>
+            </ul>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
+    
+            <h3>Applied Statistics, Xiamen University (XMU)</h3>
+            <p><strong>Guest Lecturer & Teaching Assistant</strong></p>
+            <p><strong>Semester:</strong> Fall 2018</p>
+            <ul>
+                <li>Delivered three lectures on descriptive statistics, confidence intervals and significance tests, and analysis of variance (ANOVA).</li>
+                <li>Provided feedback and pre-grading for 5 assignments covering topics such as the Central Limit Theorem, parameter estimation, and ANOVA.</li>
+                <li>Managed the final exam, including monitoring and pre-grading.</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    
+    
 
-    <div id="Awards & Grant" class="content">
-        <h1>Contact Us</h1>
-        <p>Get in touch via this section.</p>
-    </div>
 
     <script>
         function showContent(section) {
