@@ -61,7 +61,7 @@
         }
 
         .profile img {
-            width: 20%; /* Smaller width for the image */
+            width: 30%; /* Smaller width for the image */
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px; /* Rounded corners for the image */
             flex-shrink: 0; /* Prevents image from resizing */
@@ -140,7 +140,7 @@
 
     <div id="Home" class="content" style="padding: 20px;">
         <div class="profile" style="max-width: 1000px; margin: auto; text-align: left;">
-            <img src="asset/icon.jpg" alt="My Picture" style="display: block; margin: auto; margin-bottom: 680px; width: 300px; height: auto;">
+            <img src="asset/icon.jpg" alt="My Picture" style="display: block; margin: auto; margin-bottom: 660px; width: 350px; height: auto;">
             <div>
                 <h1 style="text-align: center;">Welcome to My Page!</h1>
                 <p>
@@ -196,7 +196,7 @@
                     <li>Crisis Management</li>
                     <li>Persuasive Communication</li>
                 </ul>
-                <img src="asset/research.jpg" alt="Research Image" style="display: block; margin: auto; width: 600px; height: auto; margin-top: 20px;">
+                <img src="asset/research.jpg" alt="Research Image" style="display: block; margin: auto; width: 700px; height: auto; margin-top: 20px;">
             </div>
         </div>
     </div>
@@ -228,7 +228,7 @@
                             <em>International Journal of Human-Computer Interaction</em>. 
                             <a href="https://doi.org/10.1080/10447318.2023.2290378" target="_blank">https://doi.org/10.1080/10447318.2023.2290378</a>
                         </p>
-                        <span>[SSCI]</span>
+                        <span>[*Corresponding Author] [SSCI]</span>
                     </div>
                 </li>
                 <li>
@@ -239,7 +239,7 @@
                             <em>Public Relations Review, 49</em>(5), 102389. 
                             <a href="https://doi.org/10.1016/j.pubrev.2023.102389" target="_blank">https://doi.org/10.1016/j.pubrev.2023.102389</a>
                         </p>
-                        <span>[SSCI]</span>
+                        <span>[*Corresponding Author] [SSCI]</span>
                     </div>
                 </li>
                 <li>
@@ -280,9 +280,9 @@
                     <div>
                         <p>
                             Gong, H., Zhang, Y., & <strong>Huang, M.</strong> (forthcoming). Encountering uncertainty: The effect of social media influencers’ crisis attribution on public perception of responsibility. 
-                            <em>Journalism & Communication</em>. [In Chinese]
+                            <em>Journalism & Communication</em>. 
                         </p>
-                        <span>[CSSCI]</span>
+                        <span>[In Chinese] [CSSCI]</span>
                     </div>
                 </li>
                 <li>
@@ -406,6 +406,17 @@
                 <li>Developed the syllabus, designed class activities and assignments, and coordinated with appropriate organizations to serve as the client for the course.</li>
                 <li>Guided students through the four-step strategic public relations process (research, planning, implementation, evaluation), assisting them in writing public relations campaign proposals and implementing the events and strategies proposed.</li>
                 <li>Provided weekly feedback for each group on their campaign planning progress, covering components such as secondary and primary research, SWOT analysis, problem and objective statements, audience profiling, programming, strategy development, event implementation, and evaluation.</li>
+                <div style="margin-top: 20px;">
+                    <div id="image-slider" style="position: relative; max-width: 800px; margin: auto;">
+                        <img src="asset/Teach1.jpg" alt="Teaching Example 1" style="width: 100%; display: block;">
+                        <img src="asset/Teach2.jpg" alt="Teaching Example 2" style="width: 100%; display: none;">
+                        <img src="asset/Teach3.jpg" alt="Teaching Example 3" style="width: 100%; display: none;">
+        
+                        <!-- Navigation buttons -->
+                        <button id="prev" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10094;</button>
+                        <button id="next" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-color: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+                    </div>
+                </div>
             </ul>
             <hr style="border: 1px solid #ccc; margin: 20px 0;"> <!-- Divider -->
     
@@ -479,6 +490,29 @@
                 <li>Provided feedback and pre-grading for 5 assignments covering topics such as the Central Limit Theorem, parameter estimation, and ANOVA.</li>
                 <li>Managed the final exam, including monitoring and pre-grading.</li>
             </ul>
+
+            <script>
+                const images = document.querySelectorAll('#image-slider img');
+                let currentIndex = 0;
+    
+                function showImage(index) {
+                    images.forEach((img, i) => {
+                        img.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+    
+                document.getElementById('prev').addEventListener('click', () => {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                    showImage(currentIndex);
+                });
+    
+                document.getElementById('next').addEventListener('click', () => {
+                    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                    showImage(currentIndex);
+                });
+    
+                showImage(currentIndex);
+            </script>
         </div>
     </div>
     
