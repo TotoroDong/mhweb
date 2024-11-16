@@ -8,33 +8,89 @@
         }
 
         #navbar {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px 10;
+            text-align: right;
         }
 
         #navbar button {
-            background-color: #4CAF50;
-            color: white;
+            background: none;
+            color: rgb(0, 0, 0);
             border: none;
             padding: 10px 20px;
-            margin: 0 10px;
+            margin: 10px 10px 0;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+            font-weight: bold; /* Make the font bolder */
+            text-decoration: none; /* Remove any default decoration */
+            transition: text-decoration 3s;
         }
 
+
         #navbar button:hover {
-            background-color: #3e8e41;
-            transform: translateY(-2px);
+            text-decoration: underline; /* Underline on hover */
         }
 
         .content {
             display: none; /* Hide all content by default */
+            width: 80%; /* Set a maximum width */
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            margin-top: 20px;
+            margin: 50px auto; /* Auto margins for horizontal centering, adjusted for navbar */
+            text-align: center; /* Center text and other inline content */
+            position: relative; /* Needed for centering the inner content */
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start; /* Align items vertically */
+            justify-content: center; /* Center-align horizontally */
+            flex-direction: row; /* Layout items horizontally */
+            width: 100%; /* Use full width of the container */
+            gap: 20px; /* Space between text and image */
+        }
+
+        .profile-text {
+            flex: 1; /* Takes up remaining space */
+            text-align: left; /* Align text to the left */
+        }
+
+        .profile img {
+            width: 20%; /* Smaller width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+            flex-shrink: 0; /* Prevents image from resizing */
+        }
+
+        .publications-container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .publications {
+            text-align: left; /* Align text to the left within the list */
+            list-style: none; /* Remove default list styling */
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Ensures all items align at their start */
+            margin: 0;
+        }
+
+        .publications li {
+            margin-bottom: 10px; /* Adds spacing between items */
+            display: flex;
+            align-items: center; /* Aligns the icon and text vertically */
+            text-align: left;
+            width: 1000px;
+        }
+
+        .publications img {
+            width: 50px; /* Set the icon size */
+            margin-right: 10px; /* Space between the icon and the text */
         }
 
         .active {
@@ -44,22 +100,95 @@
 </head>
 <body>
     <div id="navbar">
-        <button onclick="showContent('home')">Home</button>
-        <button onclick="showContent('about')">About</button>
-        <button onclick="showContent('contact')">Contact</button>
+        <button onclick="showContent('Home')">Home</button>
+        <button onclick="showContent('Publication')">Publication</button>
+        <button onclick="showContent('Awards & Grant')">Awards & Grant</button>
     </div>
 
-    <div id="home" class="content">
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home section.</p>
+    <div id="Home" class="content" style="padding: 20px;">
+        <div class="profile" style="max-width: 1000px; margin: auto; text-align: left;">
+            <img src="asset/icon.jpg" alt="My Picture" style="display: block; margin: auto; margin-bottom: 580px; width: 300px; height: auto;">
+            <div>
+                <h1 style="text-align: center;">Welcome to My Page!</h1>
+                <p>
+                    Hello! My name is Miaohong Huang, and I am a Ph.D. candidate (ABD) in the College of Communication and Information Science at the University of Alabama. 
+                </p>
+                <h2>Education</h2>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 0;">
+                    <!-- First Education -->
+                    <div style="display: flex; width: 100%; margin-bottom: 10px; align-items: flex-start; line-height: 1.5;">
+                        <span style="width: 170px; font-weight: bold; text-align: right; padding-right: 15px; flex-shrink: 0;">2021 – 2025</span>
+                        <span style="flex-grow: 1;">
+                            Ph.D. in Communication & Information Science (Expected May 2025)<br>
+                            College of Communication and Information Science (C&IS)<br>
+                            University of Alabama (UA), Tuscaloosa, AL, USA
+                        </span>
+                    </div>
+                
+                    <!-- Second Education -->
+                    <div style="display: flex; width: 100%; margin-bottom: 10px; align-items: flex-start; line-height: 1.5;">
+                        <span style="width: 170px; font-weight: bold; text-align: right; padding-right: 15px; flex-shrink: 0;">2018 – 2021</span>
+                        <span style="flex-grow: 1;">
+                            M.A. in Journalism and Communication (Honors Master Thesis)<br>
+                            School of Journalism and Communication<br>
+                            Xiamen University (XMU), Xiamen, China
+                        </span>
+                    </div>
+                
+                    <!-- Third Education -->
+                    <div style="display: flex; width: 100%; margin-bottom: 10px; align-items: flex-start; line-height: 1.5;">
+                        <span style="width: 170px; font-weight: bold; text-align: right; padding-right: 15px; flex-shrink: 0;">2014 – 2018</span>
+                        <span style="flex-grow: 1;">
+                            B.A. in Advertising<br>
+                            School of Journalism and Communication<br>
+                            Xiamen University (XMU), Xiamen, China
+                        </span>
+                    </div>
+                </div>
+                <h2 style="margin-top: 30px;">About My Research</h2>
+                <p>
+                    My research seeks to answer a central question: How can organizations and the public leverage emerging media technologies (e.g., AI-driven chatbots, virtual influencers, immersive media)<br>
+                    to communicate effectively and achieve meaningful outcomes for the social good, particularly in health promotion and crisis management? 
+                </p>
+                <p>
+                    My primary research methodologies consist of quantitative approaches, including online and offline experiments, surveys, content analysis, and computational analysis.<br><br>
+                    Research Interest:
+                    Strategic Communication 
+                    Public Relations
+                    Emerging Media Effects
+                    Health Communication
+                    Crisis Management
+                    Persuasive Communication 
+                    <br><br>
+                    My current research projects can be classified as:
+                </p>
+                <img src="asset/research.jpg" alt="Research Image" style="display: block; margin: auto; width: 600px; height: auto; margin-top: 20px;">
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <div id="Publication" class="content">
+        <h1>Publications</h1>
+        <ul class="publications">
+            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., Mikkilineni, S. D., Lee, J., & Duboise, M. (2024). The effects of augmented 
+                reality on prosocial behavior intentions in the disaster news context: The 
+                mediating role of physical presence and empathy. New Media & Society, 
+                14614448241252594. https://doi.org/10.1177/14614448241252594 [SSCI]</li>
+            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., & Ki, E.-J. (2023). Examining the effect of anthropomorphic design cues on 
+                healthcare chatbots acceptance and organization-public relationships: Trust in a warm human vs. a competent machine. International Journal of Human-Computer 
+                Interaction. https://doi.org/10.1080/10447318.2023.2290378 [SSCI] </li>
+            <li><img src="asset/icon.jpg" alt="Document Icon">Huang, M., & Ki, E.-J. (2023). Protecting organizational reputation during a para-crisis: 
+                The effectiveness of conversational human voice on social media and the roles of 
+                construal level, social presence, and organizational listening. Public Relations 
+                Review, 49(5), 102389. https://doi.org/10.1016/j.pubrev.2023.102389 [SSCI]</li>
+            <!-- Add more publications as needed -->
+        </ul>
     </div>
 
-    <div id="about" class="content">
-        <h1>About Us</h1>
-        <p>Learn more about us in this section.</p>
-    </div>
-
-    <div id="contact" class="content">
+    <div id="Awards & Grant" class="content">
         <h1>Contact Us</h1>
         <p>Get in touch via this section.</p>
     </div>
@@ -81,7 +210,7 @@
 
         // Optionally show default section on page load
         window.onload = function() {
-            showContent('home'); // Change 'home' to whichever section you want as default
+            showContent('Home'); // Change 'home' to whichever section you want as default
         };
     </script>
 </body>
