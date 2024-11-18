@@ -58,35 +58,32 @@
             align-items: flex-start; /* Align items vertically */
             justify-content: center; /* Center-align horizontally */
             flex-direction: row; /* Layout items horizontally */
-            width: 100%; /* Use full width of the container */
             gap: 20px; /* Space between text and image */
-        }
-
-
-
-        .profile-text {
-            flex: 1; /* Takes up remaining space */
             text-align: left; /* Align text to the left */
+            max-width: 1000px;
+            margin: auto;
+            padding: 0;
         }
 
         .profile img {
-            width: 30%; /* Smaller width for the image */
+            width: 300px; /* Smaller width for the image */
             height: auto; /* Maintain aspect ratio */
             border-radius: 10px; /* Rounded corners for the image */
             flex-shrink: 0; /* Prevents image from resizing */
             margin-top: 80px;
         }
 
-        @media (max-width: 468px) {
-            .profile {
-                flex-wrap: wrap; /* Enable wrapping for smaller screens */
-            }
+        @media (max-width: 1200px) {
+    .profile {
+        flex-wrap: wrap;
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+    .profile img {
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+}
 
-            .profile img {
-            margin-bottom: 0px; /* Adjust margin-bottom for smaller screens */
-            width: 50%; /* Adjust image size for smaller screens */
-            }
-        }
 
         .publications-container {
             display: flex;
@@ -95,14 +92,14 @@
             background-color: #f9f9f9; /* Light background for better readability */
         }
 
-.publications {
-    text-align: left;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 800px; /* Limit width for better readability */
-    width: 100%;
-}
+        .publications {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 800px; /* Limit width for better readability */
+            width: 100%;
+        }
 
 .publications li {
     margin-bottom: 20px; /* Adds more spacing between items */
@@ -160,7 +157,7 @@
     </div>
 
     <div id="Home" class="content" style="padding: 20px;">
-        <div class="profile" style="max-width: 1000px; margin: auto; text-align: left;">
+        <div class="profile">
             <img src="asset/icon.jpg" alt="My Picture">
             <div>
                 <h1 style="text-align: center;">Welcome to My Page!</h1>
